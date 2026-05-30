@@ -43,3 +43,26 @@ Do not commit:
 `v0.1.0-rc`
 
 Use a final `v1.0.0` release only after repository URL, license, manuscript metadata, and optional Zenodo archive are finalized.
+
+## Current Local Git State
+
+This release candidate has already been initialized as a local Git repository on branch `main`.
+
+The first local commit has been created with anonymous review-safe metadata:
+
+- author name: `Anonymous Authors`
+- author email: `anonymous@example.com`
+- commit message: `Add minimal audit artifact release candidate`
+
+## Push After Creating a Private GitHub Repository
+
+After creating a private repository named `agentic-llm-vuln-mining-survey-artifact` under the target GitHub account, run these commands from `artifact_public_release_candidate/`:
+
+```bash
+git remote add origin https://github.com/OWNER/agentic-llm-vuln-mining-survey-artifact.git
+git push -u origin main
+```
+
+Replace `OWNER` with the actual GitHub owner or organization.
+
+If using HTTPS and GitHub asks for credentials, use a personal access token or GitHub Desktop. Do not paste tokens into manuscript files or artifact data files.
