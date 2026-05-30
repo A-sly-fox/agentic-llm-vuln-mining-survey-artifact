@@ -15,7 +15,7 @@ Suggested short description:
 ## Before Creating the Repository
 
 - [x] Choose final license: CC BY 4.0 for data/docs and MIT for code.
-- [ ] Replace `REPLACE_WITH_PUBLIC_REPOSITORY_URL` in `CITATION.cff`.
+- [x] Replace `REPLACE_WITH_PUBLIC_REPOSITORY_URL` in `CITATION.cff`.
 - [ ] Replace `[REPOSITORY URL]` in the manuscript.
 - [ ] Decide whether author names should remain anonymous before review.
 - [x] Decide whether the repository should be private until acceptance or public at submission: private repository for now.
@@ -66,3 +66,9 @@ git push -u origin main
 Replace `OWNER` with the actual GitHub owner or organization.
 
 If using HTTPS and GitHub asks for credentials, use a personal access token or GitHub Desktop. Do not paste tokens into manuscript files or artifact data files.
+
+Current remote:
+
+```bash
+origin https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact.git
+```

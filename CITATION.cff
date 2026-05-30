@@ -7,7 +7,7 @@ authors:
 abstract: "Non-sensitive audit artifact for a survey of Agentic LLM systems for vulnerability mining, including corpus metadata, A/E coding, reference audit data, and reproducibility checks."
 date-released: "2026-05-31"
 version: "0.1.0-rc"
-repository-code: "REPLACE_WITH_PUBLIC_REPOSITORY_URL"
+repository-code: "https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact"
 license: "CC-BY-4.0 AND MIT"
 keywords:
   - "agentic LLM"
