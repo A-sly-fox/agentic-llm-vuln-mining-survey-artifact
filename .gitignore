@@ -1,0 +1,23 @@
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local working material that should not be committed
+zotero_export_*.bib
+*_backup_*.csv
+*_proposed.csv
+*_delta.csv
+verification_autofill_candidates.csv
+verification_todo.csv
+intercoder_sample_key.csv
+
+# Build/archive outputs
+*.zip
+*.log

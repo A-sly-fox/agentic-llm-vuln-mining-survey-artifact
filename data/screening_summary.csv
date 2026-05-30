@@ -1,0 +1,14 @@
+stage,count,note
+Database targeted search,NA,Not recoverable from current local records without manual audit of search logs.
+Seed papers,NA,Seed count not recorded as a separate recoverable number in current files.
+Snowball additions,NA,Snowball additions not recoverable as a separate count from current files.
+Benchmark/project official materials,NA,"Project and benchmark materials are present, but source-specific count is not separately recoverable."
+Merged records before deduplication,NA,Pre-deduplication merged count unavailable.
+Duplicates removed,NA,Deduplication count unavailable; do not infer from SourceID duplicates because CandidateID is the authoritative record identifier.
+Records after deduplication,NA,Post-deduplication count before final candidate pool unavailable.
+Topic screening,NA,Initial screening count unavailable as a separate stage.
+Candidate pool,205,Recoverable from csur_corpus_coding_205_v1.csv and manuscript Table 1.
+Core studies,27,Final evidence-focused Core studies used for A/E deep coding and main observations.
+Supporting studies,65,"Supporting studies used for task context, benchmarks, and technical background."
+Background references,93,"Background references, related surveys, and technical prehistory."
+Excluded records,20,Boundary records excluded from the argument and statistics.

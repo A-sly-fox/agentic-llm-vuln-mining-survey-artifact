@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this audit artifact, please cite the accompanying survey manuscript."
+title: "Minimal Audit Artifact for Agentic LLM Vulnerability Mining Survey"
+type: dataset
+authors:
+  - name: "Anonymous Authors"
+abstract: "Non-sensitive audit artifact for a survey of Agentic LLM systems for vulnerability mining, including corpus metadata, A/E coding, reference audit data, and reproducibility checks."
+date-released: "2026-05-31"
+version: "0.1.0-rc"
+repository-code: "REPLACE_WITH_PUBLIC_REPOSITORY_URL"
+license: "CC-BY-4.0 AND MIT"
+keywords:
+  - "agentic LLM"
+  - "vulnerability mining"
+  - "software security"
+  - "systematic mapping"
+  - "scoping review"
+  - "audit artifact"
+references:
+  - type: article
+    title: "From Vulnerability Prediction to Evidence-Chain-Driven Vulnerability Mining: A Survey of Agentic LLM Systems for Vulnerability Mining"
+    authors:
+      - name: "Anonymous Authors"
+    year: 2026
+    status: unpublished
