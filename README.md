@@ -1,6 +1,6 @@
 # Minimal Audit Artifact for Agentic LLM Vulnerability Mining Survey
 
-This release candidate contains a non-sensitive audit artifact for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, and second-coder preparation.
+This release candidate contains a non-sensitive audit artifact for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, round-2 literature update auditing, and second-coder preparation.
 
 ## Scope
 
@@ -11,8 +11,8 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 ## Corpus Summary
 
 - Candidate records: 205
-- Core studies: 27
-- Supporting studies: 65
+- Analytical Core studies: 27
+- Eligible supporting records: 65
 - Background references: 93
 - Excluded records: 20
 
@@ -20,6 +20,9 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 
 - `data/corpus.csv`: corpus metadata and analysis-use layers.
 - `data/core_coding.csv`: A/E coding for the 27 final Core studies.
+- `data/eligible_corpus_round2_audit.csv`: round-2 corpus-layer audit with Eligible / Analytical Core / Supporting / Background / Excluded scope fields.
+- `data/round2_literature_update_audit.csv`: auditable tracking sheet for newly reviewed 2025--2026 literature candidates.
+- `data/core27_second_coder_full_template_round2.csv`: full 27-Core second-coder template with auxiliary audit fields.
 - `data/screening_summary.csv`: recoverable corpus construction and layer counts.
 - `data/reference_audit.csv`: DOI-enriched bibliographic audit table.
 - `data/doi_remaining_manual_status.csv`: records that remain DOI-less after audit passes.
@@ -60,6 +63,6 @@ The main code file covered by MIT is `reproduce_tables.py`. The CSV files and Ma
 ## Current Limitations
 
 - Some intermediate screening counts are marked `NA` because they are not recoverable from current local logs.
-- The second-coder sample is prepared, but no real second-coder results or agreement statistics are included.
+- The blind second-coder sample and full 27-Core round-2 template are prepared, but no real second-coder results or agreement statistics are included.
 - A small number of records remain DOI-less and are documented in `data/doi_remaining_manual_status.csv`.
-- The final public repository URL, release date, license, and archival DOI are not yet assigned.
+- The current public repository URL is `https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact`; an archival DOI is not yet assigned.
