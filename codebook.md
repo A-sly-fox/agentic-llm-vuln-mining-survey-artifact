@@ -23,12 +23,12 @@ This codebook documents the minimal public coding scheme for the Agentic LLM vul
 
 ## Evidence object values
 
-- **????**: labels, scores, probabilities, or textual vulnerability reasoning.
-- **????**: CTF, benchmark, cyber range, or task objective completion.
-- **????**: tool execution output, PoC/PoV, validation scripts, reports, traces, or patches.
-- **????**: real-vulnerability background built into a benchmark, range, or task setting.
-- **????**: author-reported CVE, bug bounty, vendor, maintainer, or disclosure-related clue.
-- **????**: security risks introduced by agent tool use, permissions, sandboxing, or deployment configuration.
+- **Model judgment**: labels, scores, probabilities, or textual vulnerability reasoning.
+- **Task completion**: CTF, benchmark, cyber range, or task objective completion.
+- **System output**: tool execution output, PoC/PoV, validation scripts, reports, traces, or patches.
+- **Task background**: real-vulnerability background built into a benchmark, range, or task setting.
+- **External clue**: author-reported CVE, bug bounty, vendor, maintainer, or disclosure-related clue.
+- **Governance risk**: security risks introduced by agent tool use, permissions, sandboxing, or deployment configuration.
 
 ## External-evidence profiles
 

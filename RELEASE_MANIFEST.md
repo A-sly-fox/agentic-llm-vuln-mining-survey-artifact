@@ -1,16 +1,16 @@
 # Release Manifest
 
-Date prepared: 2026-05-31
+Date prepared: 2026-06-02
 
 ## Included
 
 The release candidate includes files that are necessary for non-sensitive survey auditability:
 
 - corpus metadata;
-- final Core A/E coding;
-- round-2 eligible-corpus audit;
-- round-2 literature-update audit;
-- full 27-Core second-coder template with auxiliary audit fields;
+- Core A/E coding;
+- corpus-layer audit;
+- literature-update decision audit;
+- full 31-Core second-coder submission template with auxiliary audit fields;
 - corpus screening summary;
 - DOI-enriched reference audit;
 - remaining DOI-less status notes;
@@ -34,13 +34,13 @@ The following working files are intentionally excluded from this public release 
 - audit-table backups;
 - Zotero DOI merge deltas;
 - autofill candidate worksheets;
-- verification todo worksheets containing local Zotero keys and working notes;
+- verification status worksheets containing local Zotero keys and working notes;
 - `intercoder_sample_key.csv`, because it should not be shared before independent second-coder work is complete;
 - compile logs, snapshots, manuscript files, and internal phase reports.
 
 ## Rationale
 
-The package should be enough for reviewers to inspect the survey's corpus layers, A/E coding logic, round-2 literature-update boundary, bibliographic traceability, and reproducibility checks. It should not expose local library state, private working history, second-coder answer keys, or sensitive vulnerability materials.
+The package should be enough for reviewers to inspect the survey's corpus layers, A/E coding logic, literature-update decisions, bibliographic traceability, and reproducibility checks. It should not expose local library state, private working history, second-coder answer keys, or sensitive vulnerability materials.
 
 ## Before Public Release
 

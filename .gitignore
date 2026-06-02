@@ -15,7 +15,7 @@ zotero_export_*.bib
 *_proposed.csv
 *_delta.csv
 verification_autofill_candidates.csv
-verification_todo.csv
+verification_status.csv
 intercoder_sample_key.csv
 
 # Build/archive outputs

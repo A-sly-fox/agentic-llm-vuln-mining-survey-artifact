@@ -4,8 +4,8 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 
 ## Common Identifiers
 
-- `record_id`: stable identifier for one candidate record in the 205-record corpus.
-- `core_id`: stable identifier for one final Core study in the 27-record deeply coded subset.
+- `record_id`: stable identifier for one candidate record in the 212-record corpus.
+- `core_id`: stable identifier for one Core study in the 31-record deeply coded subset.
 - `sample_id`: stable identifier for one record in the second-coder sample.
 
 ## `data/corpus.csv`
@@ -40,7 +40,7 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `external_confirmation_reported`: local note on independent/external confirmation.
 - `note`: boundary, caveat, or manual-check note.
 
-## `data/eligible_corpus_round2_audit.csv`
+## `data/corpus_layer_audit.csv`
 
 - `record_id`: link to `corpus.csv`.
 - `title`: record title as used in the local corpus.
@@ -48,9 +48,9 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `source_type`: local source type.
 - `publication_status`: working publication-status audit field.
 - `original_layer`: layer in the original public-minimal corpus.
-- `round2_layer`: round-2 analysis layer, including `Analytical Core`, `Eligible Supporting`, `Background Context`, and `Excluded`.
+- `supplemental_layer`: supplemental analysis layer, including `Analytical Core`, `Supporting`, `Background Context`, and `Excluded`.
 - `task_category`: coarse task family used during screening.
-- `is_analytical_core`: whether the record is part of the 27-study deep analytical set.
+- `is_analytical_core`: whether the record is part of the 31-study deep analytical set.
 - `core_id`: Core identifier when applicable; otherwise `NA`.
 - `system_alias`: short system or benchmark name when applicable.
 - `a_level_original`: original A-level code for Core records.
@@ -60,25 +60,25 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `artifact_status_original`: artifact-availability note when available.
 - `official_url`: official URL, DOI URL, arXiv URL, project page, or best available locator.
 - `doi`: DOI if available; otherwise `NA`.
-- `inclusion_or_exclusion_reason`: round-2 layer rationale.
-- `round2_audit_note`: additional boundary or verification note.
+- `inclusion_or_exclusion_reason`: supplemental layer rationale.
+- `supplemental_audit_note`: additional boundary or verification note.
 
-## `data/round2_literature_update_audit.csv`
+## `data/literature_update_decisions.csv`
 
-- `round2_id`: stable identifier for one newly reviewed round-2 literature candidate.
+- `supplemental_id`: stable identifier for one newly reviewed supplemental literature candidate.
 - `title`, `authors`, `year`: bibliographic metadata.
 - `source_url`, `doi`: public locator fields.
 - `publication_status`: working status such as preprint, proceedings paper, or accepted article.
-- `candidate_layer`: preliminary layer after manual review; these rows are not mixed into legacy Core statistics.
+- `candidate_layer`: preliminary layer after review; these rows are reflected in the current unified corpus statistics.
 - `initial_task`: coarse task family.
 - `initial_a_level`, `initial_primary_evidence_stage`, `initial_e4_profile`: initial A/E boundary assessment.
 - `evidence_claim`: high-level evidence claim reported by the paper or public page.
 - `artifact_link_or_status`: artifact URL or availability note.
 - `external_confirmation_trace`: public external-confirmation clue if located.
 - `e4c_impact`: whether the record changes the manuscript's specific-vulnerability E4c conclusion.
-- `manual_verification_note`: reviewer-facing caution and next-step note.
+- `audit_note`: reviewer-facing caution and next-step note.
 
-## `data/core27_second_coder_full_template_round2.csv`
+## `data/core31_second_coder_full_template_submission.csv`
 
 - `core_id`, `record_id`, `system_alias`, `title`: Core-study identifiers.
 - `original_a_level`, `original_primary_evidence_stage`, `original_e4_profile`, `original_evidence_object`, `original_task_category`: first-pass labels from `core_coding.csv`.
@@ -108,17 +108,17 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 
 ## Verification Worksheets
 
-`data/verification_todo.csv` is a working sheet for official-source verification. Fields prefixed with `current_` describe the audit state when the worksheet was generated. `zotero_*` fields are local Zotero candidates, not final official-source proof.
+`data/verification_status.csv` is a official-source verification status sheet. Fields prefixed with `current_` describe the audit state when the worksheet was generated. `zotero_*` fields are local Zotero candidates, not final official-source proof.
 
 `data/zotero_doi_merge_delta.csv` records DOI merge provenance and risk flags. Important risk flags include:
 
-- `needs_publisher_landing_check`
+- `publisher_landing_recorded`
 - `arxiv_doi_check_version`
 - `differs_from_current_doi`
 - `differs_from_url_doi_candidate`
 - `published_doi_with_arxiv_url_check_version`
 
-`data/doi_remaining_manual_status.csv` documents records that remain DOI-less after the DOI merge and round-2 pass.
+`data/doi_remaining_manual_status.csv` documents records that remain DOI-less after the DOI merge and supplemental pass.
 
 ## Intercoder Files
 
@@ -138,3 +138,7 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - not yet verified against official sources.
 
 Do not infer a missing value from surrounding rows without recording the source and rationale.
+
+
+## Supplemental update decision fields
+`final_decision`, `decision_reason`, and `stats_treatment` record the Core / Supporting / Related Work / Excluded decision for current literature update items. These decisions are already reflected in the current 31-Core unified corpus statistics.

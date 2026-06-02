@@ -42,19 +42,21 @@ core = read_csv('core_coding.csv')
 summary = read_csv('screening_summary.csv')
 ref = read_csv('reference_audit.csv')
 
-expected_layers = {'Core': 27, 'Supporting': 65, 'Background': 93, 'Excluded': 20}
+expected_layers = {'Core': 31, 'Supporting': 66, 'Background': 95, 'Excluded': 20}
 if corpus:
-    status('ERROR', len(corpus) == 205, f'candidate records = {len(corpus)}; expected 205')
+    status('ERROR', len(corpus) == 212, f'candidate records = {len(corpus)}; expected 212')
     layer_counts = Counter(r.get('corpus_layer', 'NA') for r in corpus)
     for layer, expected in expected_layers.items():
         status('ERROR', layer_counts.get(layer, 0) == expected, f'{layer} = {layer_counts.get(layer, 0)}; expected {expected}')
 
 if core:
-    status('ERROR', len(core) == 27, f'Core rows = {len(core)}; expected 27')
+    status('ERROR', len(core) == 31, f'Core rows = {len(core)}; expected 31')
     core_ids = [r.get('core_id', '') for r in core]
     record_ids = [r.get('record_id', '') for r in core]
     status('ERROR', len(core_ids) == len(set(core_ids)), 'core_id values are unique')
     status('ERROR', len(record_ids) == len(set(record_ids)), 'record_id values are unique in core_coding.csv')
+    for required_core in ['C28', 'C29', 'C30', 'C31']:
+        status('ERROR', required_core in core_ids, f'{required_core} exists in core_coding.csv')
     missing_reason = [r.get('core_id','?') for r in core if r.get('a_level_reason','NA') in ('', 'NA') or r.get('e_level_reason','NA') in ('', 'NA')]
     if missing_reason:
         print('WARNING: missing A/E reason fields for:', ', '.join(missing_reason))
@@ -68,9 +70,11 @@ if core:
     print('A-level occurrence counts:', dict(sorted(a_counts.items())))
 
     e_counts = Counter(r.get('e_level','NA') for r in core)
-    expected_e = {'E0':1, 'E1':4, 'E2':5, 'E3':7, 'E4a':8, 'E4b':2, 'E4c':0}
+    expected_e = {'E0':3, 'E1':5, 'E2':8, 'E3':14, 'N/A':1}
     for e, expected in expected_e.items():
         status('ERROR', e_counts.get(e, 0) == expected, f'{e} = {e_counts.get(e, 0)}; expected {expected}')
+    e4c_count = sum(1 for r in core if 'E4c' in (r.get('external_evidence_profile', '') or ''))
+    status('ERROR', e4c_count == 0, f'E4c external profile = {e4c_count}; expected 0')
 
 if summary:
     stage_counts = {r.get('stage'): r.get('count') for r in summary}

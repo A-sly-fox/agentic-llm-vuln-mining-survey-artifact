@@ -1,4 +1,4 @@
-﻿sample_id,record_id,field,coder_a_decision,coder_b_decision,adjudicated_decision,rationale,resolved_by,resolved_date
+sample_id,record_id,field,coder_a_decision,coder_b_decision,adjudicated_decision,rationale,resolved_by,resolved_date
 IC001,CP075,corpus_layer_decision,,,,,,
 IC001,CP075,a_level,,,,,,
 IC001,CP075,e_level,,,,,,

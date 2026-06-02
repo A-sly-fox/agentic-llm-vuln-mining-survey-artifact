@@ -34,7 +34,7 @@ This checklist prepares the minimal artifact for a future GitHub or Zenodo relea
 - [x] `reproduce_tables.py` runs without count or A/E distribution errors.
 - [x] Remaining DOI gaps are documented rather than guessed.
 - [ ] If second-coder results are completed, add an auditable agreement script and output.
-- [ ] Freeze the final corpus date and search cutoff date in the manuscript and artifact README.
+- [ ] Record the final corpus date and search cutoff date in the manuscript and artifact README.
 
 ## Submission Notes
 

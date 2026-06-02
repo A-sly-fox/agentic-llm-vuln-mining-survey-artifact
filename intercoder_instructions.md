@@ -23,7 +23,7 @@ Use a compact but meaningful sample rather than the full corpus unless the autho
 
 - Select 10--12 Core studies.
 - Select 8--10 Core / Supporting boundary records.
-- Select 5--8 Supporting records.
+- Select 5--8 Supporting studies.
 
 The sample should include at least:
 

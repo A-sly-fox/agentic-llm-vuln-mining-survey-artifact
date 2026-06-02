@@ -5,7 +5,7 @@ This artifact is designed for survey auditability, not for vulnerability reprodu
 ## Included
 
 - Corpus-layer metadata for candidate records.
-- A/E coding decisions and rationales for final Core studies.
+- A/E coding decisions and rationales for Core studies.
 - Bibliographic audit fields such as DOI, arXiv ID, official URL, venue, and publication status.
 - Reproducibility checks for corpus counts and coding distributions.
 - Templates for independent second-coder checking and disagreement resolution.
