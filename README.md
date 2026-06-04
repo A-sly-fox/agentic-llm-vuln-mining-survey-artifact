@@ -1,6 +1,6 @@
 # Minimal Audit Artifact for Agentic LLM Vulnerability Mining Survey
 
-This release candidate contains a non-sensitive audit artifact for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, literature update decisions, and second-coder preparation.
+This current public audit artifact contains non-sensitive materials for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, literature update decisions, and second-coder preparation.
 
 ## Scope
 
@@ -36,9 +36,9 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 - `public_release_checklist.md`: release-readiness checklist.
 - `reproduce_tables.py`: reproducibility checks for counts and A/E distributions.
 - `RELEASE_MANIFEST.md`: file inclusion/exclusion rationale.
-- `LICENSE_OPTIONS.md`: license choices awaiting author decision.
-- `CITATION.cff`: citation metadata template with placeholder repository URL.
-- `REPOSITORY_SETUP.md`: checklist for creating the public artifact repository.
+- `LICENSE_OPTIONS.md`: license rationale for the current split-license setup.
+- `CITATION.cff`: citation metadata for the current public repository.
+- `REPOSITORY_SETUP.md`: repository setup decisions and current remote notes.
 - `.gitignore`: guardrails for keeping local/private working files out of the release repository.
 
 ## Reproduce Checks
@@ -53,7 +53,7 @@ Expected result: all corpus counts and A/E distribution checks pass. Remaining m
 
 ## License
 
-This release candidate uses a split license:
+This artifact uses a split license:
 
 - data and documentation: CC BY 4.0, see `LICENSE-DATA`;
 - code scripts: MIT License, see `LICENSE-CODE`.

@@ -1,6 +1,6 @@
 # License Decision
 
-The selected license strategy for this release candidate is:
+The selected license strategy for this current public audit artifact is:
 
 - data and documentation: Creative Commons Attribution 4.0 International, CC BY 4.0;
 - code scripts: MIT License.

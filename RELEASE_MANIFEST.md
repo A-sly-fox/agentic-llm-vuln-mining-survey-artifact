@@ -1,10 +1,10 @@
-# Release Manifest
+# Public Artifact Manifest
 
 Date prepared: 2026-06-02
 
 ## Included
 
-The release candidate includes files that are necessary for non-sensitive survey auditability:
+The current public audit artifact includes files that are necessary for non-sensitive survey auditability:
 
 - corpus metadata;
 - Core A/E coding;
@@ -27,7 +27,7 @@ The release candidate includes files that are necessary for non-sensitive survey
 
 ## Excluded
 
-The following working files are intentionally excluded from this public release candidate:
+The following working files are intentionally excluded from this public audit artifact:
 
 - local Zotero BibTeX export;
 - proposed/intermediate reference audit variants;
@@ -42,12 +42,12 @@ The following working files are intentionally excluded from this public release 
 
 The package should be enough for reviewers to inspect the survey's corpus layers, A/E coding logic, literature-update decisions, bibliographic traceability, and reproducibility checks. It should not expose local library state, private working history, second-coder answer keys, or sensitive vulnerability materials.
 
-## Before Public Release
+## Open Maintenance Items
 
 Open decisions:
 
 - whether to archive on Zenodo;
-- final release date;
+- archival release date if a Zenodo or venue archive is later created;
 - whether to include completed second-coder results after real independent coding is available.
 
 Current public repository URL: `https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact`.
