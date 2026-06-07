@@ -9,7 +9,8 @@ The current public audit artifact includes files that are necessary for non-sens
 - corpus metadata;
 - Core A/E coding;
 - corpus-layer audit;
-- literature-update decision audit;
+- boundary/high-relevance record classification audit;
+- literature-update provenance sheet;
 - full 31-Core second-coder submission template with auxiliary audit fields;
 - corpus screening summary;
 - DOI-enriched reference audit;
@@ -40,7 +41,7 @@ The following working files are intentionally excluded from this public audit ar
 
 ## Rationale
 
-The package should be enough for reviewers to inspect the survey's corpus layers, A/E coding logic, literature-update decisions, bibliographic traceability, and reproducibility checks. It should not expose local library state, private working history, second-coder answer keys, or sensitive vulnerability materials.
+The package should be enough for reviewers to inspect the survey's corpus layers, A/E coding logic, boundary-record classification decisions, bibliographic traceability, and reproducibility checks. It should not expose local library state, private working history, second-coder answer keys, or sensitive vulnerability materials.
 
 ## Open Maintenance Items
 

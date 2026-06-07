@@ -41,6 +41,7 @@ corpus = read_csv('corpus.csv')
 core = read_csv('core_coding.csv')
 summary = read_csv('screening_summary.csv')
 ref = read_csv('reference_audit.csv')
+record_classification = read_csv('record_classification_audit.csv')
 
 expected_layers = {'Core': 31, 'Supporting': 66, 'Background': 95, 'Excluded': 20}
 if corpus:
@@ -87,5 +88,20 @@ if ref:
     print(f'WARNING: reference_audit missing official_url in {missing_url} rows')
     print(f'WARNING: reference_audit missing doi in {missing_doi} rows')
     print(f'WARNING: reference_audit missing last_verified_date in {missing_verified} rows')
+
+if record_classification:
+    expected_records = {
+        'FuzzingBrain V2': 'Core',
+        'DrillAgent': 'Core',
+        'AIxCC SoK': 'Background',
+        'OSS-CRS': 'Core',
+        'GONDAR': 'Core',
+        'COTTONTAIL': 'Supporting',
+        'Wan et al.': 'Background',
+    }
+    status('ERROR', len(record_classification) == 7, f'record_classification_audit rows = {len(record_classification)}; expected 7')
+    actual = {r.get('record', ''): r.get('classification', '') for r in record_classification}
+    for record, expected in expected_records.items():
+        status('ERROR', actual.get(record) == expected, f'{record} classification = {actual.get(record, "MISSING")}; expected {expected}')
 
 print('DONE')

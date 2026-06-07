@@ -63,13 +63,25 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `inclusion_or_exclusion_reason`: supplemental layer rationale.
 - `supplemental_audit_note`: additional boundary or verification note.
 
+## `data/record_classification_audit.csv`
+
+- `record`: record or system name as shown in the manuscript discussion.
+- `citation_id`: local citation or bibliography key used for traceability.
+- `classification`: final analysis-use layer for the record: `Core`, `Supporting`, or `Background`.
+- `boundary_case`: whether the record was treated as a boundary/high-relevance classification case.
+- `classification_reason`: concise reason for the final layer decision.
+- `core_eligibility`: whether the record has a codable system workflow for Core treatment.
+- `evidence_chain_relevance`: relationship to CRS, PoV, execution feedback, fuzzing, or evidence-chain analysis.
+- `high_risk_claim_handling`: how zero-day, CVE, maintainer-confirmation, unknown-vulnerability, or similar high-risk claims are scoped.
+- `author_note`: release note explaining that the classification was retained in the public artifact after the manuscript boundary table was removed.
+
 ## `data/literature_update_decisions.csv`
 
-- `supplemental_id`: stable identifier for one newly reviewed supplemental literature candidate.
+- `supplemental_id`: stable identifier for one high-relevance literature candidate.
 - `title`, `authors`, `year`: bibliographic metadata.
 - `source_url`, `doi`: public locator fields.
 - `publication_status`: working status such as preprint, proceedings paper, or accepted article.
-- `candidate_layer`: preliminary layer after review; these rows are reflected in the current unified corpus statistics.
+- `candidate_layer`: layer after review; these rows are reflected in the current unified corpus statistics.
 - `initial_task`: coarse task family.
 - `initial_a_level`, `initial_primary_evidence_stage`, `initial_e4_profile`: initial A/E boundary assessment.
 - `evidence_claim`: high-level evidence claim reported by the paper or public page.
@@ -140,5 +152,5 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 Do not infer a missing value from surrounding rows without recording the source and rationale.
 
 
-## Supplemental update decision fields
-`final_decision`, `decision_reason`, and `stats_treatment` record the Core / Supporting / Related Work / Excluded decision for current literature update items. These decisions are already reflected in the current 31-Core unified corpus statistics.
+## Record classification audit fields
+`final_decision`, `decision_reason`, and `stats_treatment` in `data/literature_update_decisions.csv` preserve the provenance of Core / Supporting / Background / Excluded decisions for the seven high-relevance records. The manuscript-facing classification summary is provided in `data/record_classification_audit.csv`, and these decisions are already reflected in the current 31-Core corpus statistics.

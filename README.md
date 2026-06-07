@@ -1,6 +1,6 @@
 # Minimal Audit Artifact for Agentic LLM Vulnerability Mining Survey
 
-This current public audit artifact contains non-sensitive materials for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, literature update decisions, and second-coder preparation.
+This current public audit artifact contains non-sensitive materials for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, boundary-record classification, and second-coder preparation.
 
 ## Scope
 
@@ -21,7 +21,8 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 - `data/corpus.csv`: corpus metadata and analysis-use layers.
 - `data/core_coding.csv`: A/E coding for the 31 Core studies.
 - `data/corpus_layer_audit.csv`: corpus-layer audit with Core / Supporting / Background / Excluded scope fields.
-- `data/literature_update_decisions.csv`: auditable tracking sheet for current literature update decisions.
+- `data/record_classification_audit.csv`: classification audit for seven boundary/high-relevance records moved out of the manuscript table.
+- `data/literature_update_decisions.csv`: source and provenance tracking sheet for the same seven high-relevance records.
 - `data/core31_second_coder_full_template_submission.csv`: full 31-Core second-coder template with auxiliary audit fields.
 - `data/screening_summary.csv`: recoverable corpus construction and layer counts.
 - `data/reference_audit.csv`: DOI-enriched bibliographic audit table.
