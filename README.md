@@ -15,6 +15,7 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 - Supporting studies: 66
 - Background references: 95
 - Excluded records: 20
+- Last incremental manuscript search date: 2026-05-20
 
 ## Files
 

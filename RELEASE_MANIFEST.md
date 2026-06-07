@@ -2,6 +2,8 @@
 
 Date prepared: 2026-06-02
 
+Last incremental manuscript search date: 2026-05-20
+
 ## Included
 
 The current public audit artifact includes files that are necessary for non-sensitive survey auditability:
