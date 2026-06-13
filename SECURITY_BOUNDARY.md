@@ -35,3 +35,5 @@ Before public release, authors should decide:
 - whether second-coder adjudication files are ready for release;
 - the public license;
 - the archival target, such as GitHub, Zenodo, or both.
+
+The reproducibility audit does not publish Zotero PDFs, private paths, undisclosed PoC, exploit payloads, sensitive crash inputs, private targets, credentials, or vendor communications. Local review files are excluded through `.gitignore`.

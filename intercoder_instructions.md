@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This template supports an independent second-coder check for the survey corpus layering, A-level coding, E-level coding, evidence object coding, and external-evidence profile coding. It is a template only. It does not contain second-coder decisions, agreement rates, Cohen's kappa, weighted kappa, or resolved disagreements.
+This template supports an independent second-coder check for the survey corpus layering, A-profile coding, E-level coding, evidence object coding, and external-evidence profile coding. It is a template only. It does not contain second-coder decisions, agreement rates, Cohen's kappa, weighted kappa, or resolved disagreements.
 
 ## Independence Requirement
 
@@ -41,7 +41,7 @@ Fill `data/intercoder_check_template.csv` with one row per sampled record.
 - `sample_id`: Local sample identifier, such as `S01`.
 - `record_id`: The candidate or Core record identifier from the artifact data.
 - `corpus_layer_decision`: Second coder's layer decision, such as `Core`, `Supporting`, `Background`, or `Excluded`.
-- `a_level`: Second coder's A-level decision, such as `A0`, `A1`, `A2`, `A3`, `A4`, `A5`, or a range/multilabel if the codebook permits it.
+- `a_level`: Second coder's A-profile decision, such as `A0`, `A1`, `A2`, `A3`, `A4`, `A5`, or a plus-style capability combination if the codebook permits it.
 - `e_level`: Second coder's E-level decision, such as `E0`, `E1`, `E2`, `E3`, `E4a`, `E4b`, or `E4c`.
 - `evidence_object`: One of the six manuscript categories: model judgment, task completion, system output, task background, external clues, or governance risk.
 - `external_evidence_profile`: Use `E4a`, `E4b`, `E4c`, or `NA` when no external-evidence profile applies.
@@ -55,7 +55,7 @@ Fill `data/intercoder_check_template.csv` with one row per sampled record.
 After the second coder completes the sheet, the author may calculate:
 
 - Raw agreement for corpus layer.
-- Raw agreement for A-level.
+- Raw agreement for A-profile.
 - Raw agreement for E-level.
 - Raw agreement for evidence object.
 - Cohen's kappa for categorical fields, if appropriate.

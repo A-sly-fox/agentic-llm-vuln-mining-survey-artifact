@@ -17,6 +17,12 @@ zotero_export_*.bib
 verification_autofill_candidates.csv
 verification_status.csv
 intercoder_sample_key.csv
+local_private_working/
+*.sqlite
+*.sqlite-journal
+*.pdf
+zotero_private_paths.csv
+ZOTERO_PDF_RESOLUTION_REPORT_PRIVATE.md
 
 # Build/archive outputs
 *.zip

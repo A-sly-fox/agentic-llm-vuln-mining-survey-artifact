@@ -42,3 +42,7 @@ This checklist prepares the minimal artifact for a future GitHub or Zenodo relea
 - [ ] State that missing intermediate screening counts are `NA` because they were not recoverable from local logs.
 - [ ] State that Zotero DOI merge improved metadata coverage but does not replace official landing-page verification for every record.
 - [ ] State that no exploit payloads or undisclosed vulnerability reproduction materials are released.
+
+- [x] Confirm `local_private_working/`, `.pdf`, and `.sqlite` files are not tracked.
+- [x] Confirm `core_reproducibility_audit.csv` contains no private Zotero paths.
+- [x] Confirm `unknown_not_audited` is not counted as absence of material.

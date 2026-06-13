@@ -1,14 +1,16 @@
-# Minimal Audit Artifact for Agentic LLM Vulnerability Mining Survey
+# Public Audit Artifact
 
-This current public audit artifact contains non-sensitive materials for a survey on Agentic LLM systems for vulnerability mining. It supports inspection of corpus construction, A/E coding, bibliographic traceability, boundary-record classification, and second-coder preparation.
+This repository contains the non-sensitive public artifact for a Chinese survey on Agentic LLM systems for vulnerability mining. It is designed for reviewer auditability, not exploit reproduction.
+
+## What To Check First
+
+1. Run `python reproduce_tables.py`.
+2. Inspect `data/corpus.csv`, `data/core_coding.csv`, and `data/corpus_layer_audit.csv` for corpus layering and Core coding.
+3. Inspect `data/v13_synthesis_statistics.csv` and `data/v13_reproducibility_audit.csv` for manuscript-facing synthesis counts.
+4. Inspect `data/product_ecosystem_snapshot.csv` for the 2026-06-13 product-ecosystem boundary snapshot.
+5. Read `SECURITY_BOUNDARY.md` before using any security-related rows.
 
 ## Scope
-
-This package is for survey auditability. It is not an exploit reproduction package.
-
-It excludes undisclosed PoCs, exploit payloads, private targets, credentials, live vulnerability reproduction instructions, sensitive crash inputs, and private vendor or bug-bounty communication.
-
-## Corpus Summary
 
 - Candidate records: 212
 - Analytical Core studies: 31
@@ -17,31 +19,29 @@ It excludes undisclosed PoCs, exploit payloads, private targets, credentials, li
 - Excluded records: 20
 - Last incremental manuscript search date: 2026-05-20
 
-## Files
+The public coding scheme uses A-profile language: A0--A3 describe the main interaction path, while A4 orchestration and A5 workflow adaptation are overlay capability tags. The plus sign means coexistence, not an ordinal interval.
+
+Product pages, help pages, official blogs, model pages, and disclosure policies are recorded as dated boundary material. They do not automatically enter Core statistics and are not treated as independent reproduction evidence.
+
+## Main Files
 
 - `data/corpus.csv`: corpus metadata and analysis-use layers.
 - `data/core_coding.csv`: A/E coding for the 31 Core studies.
-- `data/corpus_layer_audit.csv`: corpus-layer audit with Core / Supporting / Background / Excluded scope fields.
-- `data/record_classification_audit.csv`: classification audit for seven boundary/high-relevance records moved out of the manuscript table.
-- `data/literature_update_decisions.csv`: source and provenance tracking sheet for the same seven high-relevance records.
-- `data/core31_second_coder_full_template_submission.csv`: full 31-Core second-coder template with auxiliary audit fields.
-- `data/screening_summary.csv`: recoverable corpus construction and layer counts.
-- `data/reference_audit.csv`: DOI-enriched bibliographic audit table.
-- `data/doi_remaining_manual_status.csv`: records that remain DOI-less after audit passes.
-- `data/intercoder_check_template.csv`: blank template for independent second-coder checking.
-- `data/intercoder_sample_blind.csv`: 30-record blind second-coder sample.
-- `data/disagreement_resolution_template.csv`: blank disagreement-resolution worksheet.
-- `codebook.md`: A/E coding definitions and boundary examples.
-- `data_dictionary.md`: field-level data dictionary.
-- `intercoder_instructions.md`: second-coder workflow and security instructions.
-- `SECURITY_BOUNDARY.md`: explicit security and release boundary.
-- `public_release_checklist.md`: release-readiness checklist.
-- `reproduce_tables.py`: reproducibility checks for counts and A/E distributions.
-- `RELEASE_MANIFEST.md`: file inclusion/exclusion rationale.
-- `LICENSE_OPTIONS.md`: license rationale for the current split-license setup.
-- `CITATION.cff`: citation metadata for the current public repository.
-- `REPOSITORY_SETUP.md`: repository setup decisions and current remote notes.
-- `.gitignore`: guardrails for keeping local/private working files out of the release repository.
+- `data/corpus_layer_audit.csv`: layer audit fields for Core / Supporting / Background / Excluded records.
+- `data/reference_audit.csv`: bibliographic audit table.
+- `data/doi_remaining_manual_status.csv`: DOI-less or DOI-not-applicable status notes.
+- `data/v13_core_synthesis_matrix.csv`: natural-language Core synthesis matrix.
+- `data/v13_synthesis_statistics.csv`: checked synthesis counts used by the manuscript.
+- `data/core_reproducibility_audit.csv`: public-material reproducibility audit for 30 vulnerability-mining Core studies; C27 is excluded as a governance boundary case.
+- `data/product_ecosystem_snapshot.csv`: public coding-agent and security-agent product snapshot as of 2026-06-13.
+- `codebook.md` and `data_dictionary.md`: coding definitions and field descriptions.
+- `ZOTERO_PDF_RESOLUTION_REPORT.md`: path-redacted public Zotero/PDF resolution summary.
+
+Auxiliary reviewer worksheets include `data/intercoder_sample_blind.csv`, `data/intercoder_check_template.csv`, `data/disagreement_resolution_template.csv`, and `data/core31_second_coder_full_template_submission.csv`.
+
+## Security Boundary
+
+This artifact excludes undisclosed PoCs, exploit payloads, private targets, credentials, live vulnerability reproduction instructions, sensitive crash inputs, local Zotero paths, SQLite databases, PDFs, and private vendor or bug-bounty communication.
 
 ## Reproduce Checks
 
@@ -51,21 +51,11 @@ Run from this directory:
 python reproduce_tables.py
 ```
 
-Expected result: all corpus counts and A/E distribution checks pass. Remaining missing DOI rows are reported as warnings, not errors.
+Expected result: all schema, corpus count, Core count, A-profile, E-level, classification, and reproducibility-audit checks pass. Missing DOI rows are warnings unless marked otherwise.
 
 ## License
 
-This artifact uses a split license:
+- Data and documentation: CC BY 4.0, see `LICENSE-DATA`.
+- Code scripts: MIT License, see `LICENSE-CODE`.
 
-- data and documentation: CC BY 4.0, see `LICENSE-DATA`;
-- code scripts: MIT License, see `LICENSE-CODE`.
-
-The main code file covered by MIT is `reproduce_tables.py`. The CSV files and Markdown documentation are covered by CC BY 4.0 unless a file states otherwise.
-
-## Current Limitations
-
-- Some intermediate source-specific screening counts remain unrecoverable.
-- No real second-coder results or agreement statistics are included yet.
-- The blind second-coder sample and full 31-Core template are prepared only as review scaffolds.
-- A small number of records remain DOI-less and are documented in `data/doi_remaining_manual_status.csv`.
-- The current public repository URL is `https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact`; an archival DOI is not yet assigned.
+The current public repository URL is `https://github.com/oldpanthead/agentic-llm-vuln-mining-survey-artifact`. An archival DOI is not yet assigned.

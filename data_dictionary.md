@@ -28,8 +28,8 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `record_id`: link to `corpus.csv`.
 - `system_alias`: short system or benchmark name.
 - `task_category`: security task category used in manuscript analysis.
-- `a_level`: LLM agency level. See `codebook.md`.
-- `a_level_reason`: textual rationale for A-level coding.
+- `a_level`: A-profile tag or plus-style capability combination. See `codebook.md`.
+- `a_level_reason`: textual rationale for A-profile coding.
 - `e_level`: evidence level. See `codebook.md`.
 - `e_level_reason`: textual rationale for E-level coding.
 - `evidence_object`: object of evidence, such as model judgment, task completion, system output, task background, external clue, or governance risk.
@@ -53,7 +53,7 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `is_analytical_core`: whether the record is part of the 31-study deep analytical set.
 - `core_id`: Core identifier when applicable; otherwise `NA`.
 - `system_alias`: short system or benchmark name when applicable.
-- `a_level_original`: original A-level code for Core records.
+- `a_level_original`: original A-profile code for Core records.
 - `primary_evidence_stage_original`: original E0--E3 primary evidence stage for Core records.
 - `external_evidence_profile_original`: original E4 profile field for Core records.
 - `evidence_object_original`: original evidence-object field for Core records.
@@ -118,6 +118,25 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `last_verified_date`: date of the latest local audit update for this row.
 - `note`: provenance, risk flags, and manual-check notes.
 
+## `data/product_ecosystem_snapshot.csv`
+
+- `product_or_system`: public product, model, workflow, policy, or attempted source check.
+- `vendor`: vendor or organization associated with the material.
+- `snapshot_date`: date on which the product snapshot was recorded.
+- `model_or_version`: public model, version, release, or availability detail when visible; `NA` if not applicable.
+- `public_capabilities`: high-level public capability description from official sources.
+- `security_workflow`: security-relevant workflow or boundary described by the source.
+- `public_evidence_type`: material type, such as product page, developer documentation, help page, vendor blog, model page, policy page, or excluded attempted source.
+- `source_url`: official public source URL; `NA` if no reliable official source was captured.
+- `publication_or_update_date`: publication, update, or explicit page date when available; otherwise a no-date note.
+- `access_date`: date the source was accessed for this snapshot.
+- `manuscript_role`: analysis-use layer for the manuscript: `Background`, `Supporting`, `Emerging boundary case`, `Core candidate`, or `Excluded`.
+- `core_eligibility`: conservative Core-eligibility judgment. Vendor product materials do not automatically enter Core statistics.
+- `evidence_caveat`: source-limitation note, especially for vendor claims and non-independent evidence.
+- `external_traceability`: whether the public source points to independently traceable issues, advisories, CVEs, or maintainer processes.
+- `update_required`: whether the item should be refreshed before future manuscript revisions.
+- `notes`: local audit notes. This field must not include local Zotero paths, PDF paths, private working directories, credentials, or sensitive vulnerability material.
+
 ## Verification Worksheets
 
 `data/verification_status.csv` is a official-source verification status sheet. Fields prefixed with `current_` describe the audit state when the worksheet was generated. `zotero_*` fields are local Zotero candidates, not final official-source proof.
@@ -131,6 +150,8 @@ This dictionary describes the non-sensitive audit artifact used by the survey ma
 - `published_doi_with_arxiv_url_check_version`
 
 `data/doi_remaining_manual_status.csv` documents records that remain DOI-less after the DOI merge and supplemental pass.
+
+Product and policy pages added for the product-ecosystem snapshot are also listed there when DOI is not applicable. These rows record `doi_not_applicable_product_page` or equivalent status and do not change manuscript corpus or Core counts.
 
 ## Intercoder Files
 
@@ -154,3 +175,7 @@ Do not infer a missing value from surrounding rows without recording the source 
 
 ## Record classification audit fields
 `final_decision`, `decision_reason`, and `stats_treatment` in `data/literature_update_decisions.csv` preserve the provenance of Core / Supporting / Background / Excluded decisions for the seven high-relevance records. The manuscript-facing classification summary is provided in `data/record_classification_audit.csv`, and these decisions are already reflected in the current 31-Core corpus statistics.
+
+## data/core_reproducibility_audit.csv
+
+Per-Core public-material audit linked by `core_id`. Private Zotero paths are excluded. Status fields distinguish public artifact visibility, target version, environment, replay/PoC/PoV material, structured trace, author-reported external traces, publicly traceable external material, and claim-level alignment.

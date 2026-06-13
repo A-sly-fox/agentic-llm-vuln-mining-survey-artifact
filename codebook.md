@@ -2,7 +2,7 @@
 
 This codebook documents the minimal public coding scheme for the Agentic LLM vulnerability mining survey. It is intended to support auditability of the manuscript-level observations, not to publish exploit payloads or sensitive vulnerability details.
 
-## A-level: Agentic capability levels
+## A-profile: Agentic capability profiles
 
 - **A0 Prompt-level judgment**: the LLM mainly produces labels, explanations, rankings, or hypotheses from text.
 - **A1 Role discussion**: multiple personas, debate, reflection, or validator roles organize text-level reasoning, but without independent external signals.
@@ -10,6 +10,8 @@ This codebook documents the minimal public coding scheme for the Agentic LLM vul
 - **A3 Execution-feedback loop**: execution feedback enters the next input, strategy, or validation step, forming a run--observe--revise loop.
 - **A4 Multi-agent orchestration**: planning, execution, validation, reporting, or other responsibilities are distributed across traceable agents or modules.
 - **A5 Workflow self-optimization**: failures, coverage gaps, logs, or prior attempts produce reusable strategy updates beyond one-off retry or prompt rewriting.
+
+A0--A3 describe the main interaction path. A4 and A5 are overlay capability tags that can coexist with lower levels. The plus sign is used for coexistence, not for a strict ordinal interval.
 
 ## E-level: evidence strength levels
 
@@ -39,3 +41,7 @@ E4a, E4b, and E4c are external-evidence profiles. They distinguish source, publi
 - **Cybench: A4 / E1**. The system or benchmark setting may involve long-horizon agentic behavior, but the result evidence is mainly controlled task completion.
 - **RFCAUDIT: A2 / E4a**. The system action depth is tool/specification-augmented rather than a full execution-feedback loop, while the original report may include external confirmation clues.
 - **BountyBench: A4 / E4b**. The benchmark involves realistic bug-bounty-style tasks and agentic workflows, but the real-vulnerability grounding is benchmark/task background rather than direct external confirmation of every system output.
+
+## Reproducibility Audit Status Values
+
+The reproducibility audit uses `reported_yes`, `reported_partial`, `not_found_after_review`, `unknown_not_audited`, `restricted_or_sensitive`, and `not_applicable`. `unknown_not_audited` is not a negative result. Reported material requires a public source note.
